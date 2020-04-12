@@ -18,16 +18,26 @@
 
 */
 
-#include <stdio.h>
-
+#include<stdio.h>
 int main(void)
 {
-    printf("        *\n");
-    printf("       *\n");
-    printf("      *\n");
-    printf(" *   *\n");
-    printf("  * *\n");
-    printf("   *\n");
-
-    return 0;
+    int i,j,rowsize=15,cut=3;
+    for(i=0;i<=rowsize-1;i++)
+    {
+        for(j=0;j<=((rowsize-1)*2);j++)
+        {
+            if(j<cut)
+            {
+                printf(" ");
+            }
+            else
+            {
+                if(j==i || j+i==((rowsize-1)*2))
+                printf("*");
+                else
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
 }
